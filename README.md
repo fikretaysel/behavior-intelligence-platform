@@ -1,4 +1,4 @@
-````markdown
+
 # Behavior Intelligence Platform (Symfony)
 
 ## Overview
@@ -127,4 +127,4 @@ Fikret Aysel
 ## Status
 
 🟡 In Progress — currently focused on backend event infrastructure and scalable event processing.
-````
+
