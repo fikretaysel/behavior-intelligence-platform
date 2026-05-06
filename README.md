@@ -1,49 +1,69 @@
-#  Behavior Intelligence Platform (Symfony)
+````markdown
+# Behavior Intelligence Platform (Symfony)
 
-##  Overview
+## Overview
 
-This project is the **foundation of a Behavior Intelligence Platform** built with Symfony.
+A Symfony-based backend platform for scalable event tracking and behavior analytics infrastructure using event-driven architecture principles.
 
-Currently, it focuses on designing and implementing the **event tracking infrastructure** that enables collecting user behavior data.
+This project focuses on designing and implementing the core event tracking infrastructure required for collecting and processing user behavior data in modern analytics systems.
 
-The long-term goal is to analyze:
+The long-term goal is to support:
 
-* User journeys
-* Conversion paths
-* Funnel steps
-* Drop-off points
-
----
-
-##  Purpose
-
-Instead of directly building a full analytics system, this project focuses on the **core building block**:
-
- Capturing user behavior as structured events
-
-This is how modern e-commerce and analytics systems start.
+- User journey analysis
+- Conversion tracking
+- Funnel analysis
+- Drop-off detection
+- Behavioral insights
 
 ---
 
-##  Current Features
+## Purpose
 
-* Event entity design
-* Flexible event structure (metadata support)
-* User & session tracking
-* Scalable data model for future analytics
+Instead of directly building dashboards or analytics visualizations, this project focuses on the most important foundation:
 
----
+**Capturing user behavior as structured events**
 
-##  Tech Stack
-
-* PHP 8
-* Symfony
-* Doctrine ORM
-* MySQL
+Modern e-commerce and analytics platforms start with scalable event collection architecture before building higher-level analytics features.
 
 ---
 
-##  Example Event
+## Implemented Features
+
+- Event entity architecture
+- Flexible event structure with metadata support
+- User and session tracking
+- Scalable database model
+- Symfony-based modular backend structure
+- REST-oriented architecture foundation
+
+---
+
+## Architecture
+
+The platform is designed using an event-driven architecture.
+
+- User interactions are captured as immutable events
+- Events are persisted for later analytics processing
+- Asynchronous processing is planned using RabbitMQ
+- Redis is used for caching and high-performance event workflows
+- The architecture is designed for scalability and future distributed processing
+
+---
+
+## Tech Stack
+
+- PHP 8
+- Symfony
+- Doctrine ORM
+- MySQL
+- Redis
+- RabbitMQ
+- Docker
+- REST APIs
+
+---
+
+## Example Event
 
 ```json
 {
@@ -60,45 +80,51 @@ This is how modern e-commerce and analytics systems start.
 
 ---
 
-##  Architecture Idea
+## Planned Extensions
 
-The system is designed around **event-based tracking**:
-
-1. Every user action is stored as an event
-2. Events can later be processed and analyzed
-3. Higher-level insights (funnels, journeys) will be built on top of this
-
----
-
-##  Planned Features
-
-* Event ingestion API
-* Funnel analysis
-* User journey reconstruction
-* Conversion tracking
-* Real-time processing (RabbitMQ / Kafka)
-* Dashboard & visualization
+- Event ingestion API
+- Funnel analysis
+- User journey reconstruction
+- Conversion tracking
+- Real-time event processing
+- Dashboard and visualization layer
+- Distributed event processing architecture
 
 ---
 
-##  Why This Project Matters
+## Run Locally
 
-Modern platforms don’t start with dashboards.
+```bash
+git clone https://github.com/fikretaysel/behavior-intelligence-platform.git
 
-They start with **data collection architecture**.
+cd behavior-intelligence-platform
 
-This project focuses on building that foundation correctly.
+docker-compose up -d
+
+composer install
+
+php bin/console doctrine:migrations:migrate
+```
+
+---
+
+## Why This Project Matters
+
+Modern analytics platforms do not start with dashboards.
+
+They start with scalable data collection infrastructure.
+
+This project focuses on building that foundation correctly using modern backend engineering principles.
 
 ---
 
-##  Author
+## Author
 
-**Fikret Aysel**
-
----
-
-##  Status
-
-🟡 In Progress – currently focused on backend event infrastructure
+Fikret Aysel
 
 ---
+
+## Status
+
+🟡 In Progress — currently focused on backend event infrastructure and scalable event processing.
+````
